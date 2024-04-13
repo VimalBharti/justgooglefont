@@ -41,8 +41,8 @@
         </template>
         <template v-else>
           <div class="h-full" :style="{ fontFamily: selectedFont }">
-            <div class="header h-screen relative">
-              <nav class="flex items-center justify-between px-12 py-6 absolute top-0 left-0 right-0">
+            <div class="header md:h-screen h-[60vh] relative">
+              <nav class="flex items-center justify-between md:px-12 px-3 md:py-6 py-3 absolute top-0 left-0 right-0">
                 <button class="bg-zinc-900 text-white flex items-center justify-center h-12 w-12 rounded-2xl">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2.8A3.6 3.6 0 1 0 4 10a3.6 3.6 0 0 0 0-7.2m7.6 0v18.4h7.2a5.2 5.2 0 1 1 0-10.4a4 4 0 1 1 0-8zm7.2 0v8a4 4 0 1 0 0-8m0 8v10.4A5.2 5.2 0 0 0 24 16a5.2 5.2 0 0 0-5.2-5.2m-7.7-7.206L0 21.199h8.8l2.3-3.64Z"/></svg>
                 </button>
@@ -51,45 +51,45 @@
                   JustGoogleFont
                 </NuxtLink>
               </nav>
-              <div class="hero-text flex flex-col items-center justify-center w-full h-full overflow-hidden leading-[40vh]">
-                <p class="text-[40vh] uppercase text-center font-bold text-zinc-900">Google</p>
-                <p class="text-[40vh] uppercase text-center font-bold text-zinc-900">Fonts</p>
+              <div class="hero-text flex flex-col items-center justify-center w-full h-full overflow-hidden md:leading-[40vh] leading-[20vh]">
+                <p class="md:text-[40vh] text-[13vh] uppercase text-center font-bold text-zinc-900">Google</p>
+                <p class="md:text-[40vh] text-[16vh] uppercase text-center font-bold text-zinc-900">Fonts</p>
               </div>
-              <button class="absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] w-[300px] h-[300px] rounded-full bg-lime-300 p-6">
+              <button class="absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] md:w-[300px] md:h-[300px] w-[160px] h-[160px] rounded-full bg-lime-300 p-6">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-zinc-900" viewBox="0 0 24 24"><path fill="currentColor" d="M14.36 14.23a3.76 3.76 0 0 1-4.72 0a1 1 0 0 0-1.28 1.54a5.68 5.68 0 0 0 7.28 0a1 1 0 1 0-1.28-1.54M9 11a1 1 0 1 0-1-1a1 1 0 0 0 1 1m6-2a1 1 0 1 0 1 1a1 1 0 0 0-1-1m-3-7a10 10 0 1 0 10 10A10 10 0 0 0 12 2m0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8"/></svg>
               </button>
             </div>
 
-            <section class="w-full h-[30vh] overflow-hidden bg-lime-300 text-zinc-900 text-clip flex items-center justify-center">
-              <p class="text-[5.5vw] font-bold uppercase">SELECTED FONTS - {{ selectedFont }}</p>
+            <section class="w-full md:h-[30vh] h-[20vh] overflow-hidden bg-lime-300 text-zinc-900 text-clip flex items-center justify-center">
+              <p class="md:text-[5.5vw] text-[6vw] font-bold uppercase">SELECTED FONTS - {{ selectedFont }}</p>
             </section>
 
-            <section class="h-full w-full overflow-hidden p-20">
-              <p class="text-zinc-900 font-bold text-[14em] leading-[1em] text-center">LEARNING TYPE DESIGN HAS NEVER BEEN SO EASY</p>
+            <section class="h-full w-full overflow-hidden md:p-20 p-6">
+              <p class="text-zinc-900 font-bold md:text-[14em] text-[5em] leading-[1em] text-center">LEARNING TYPE DESIGN HAS NEVER BEEN SO EASY</p>
             </section>
 
-            <section class="h-full w-full bg-zinc-900 flex flex-col gap-3">
-              <div class="text-[14vw] bg-zinc-900 px-20 py-12 leading-[70%] text-white hover:bg-white hover:text-zinc-900 cursor-pointer italic font-thin">Learn</div>
-              <div class="font-bold text-[14vw] bg-zinc-900 px-20 py-12 leading-[70%] text-white hover:bg-white hover:text-zinc-900 cursor-pointer">How to</div>
-              <div class="font-bold text-[14vw] bg-zinc-900 px-20 py-12 leading-[70%] text-white hover:bg-white hover:text-zinc-900 cursor-pointer">Select Fonts</div>
-              <div class="text-[14vw] bg-zinc-900 px-20 py-12 leading-[70%] text-white hover:bg-white hover:text-zinc-900 cursor-pointer italic font-thin">Like a</div>
-              <div class="font-bold text-[14vw] bg-zinc-900 px-20 py-12 leading-[70%] text-white hover:bg-white hover:text-zinc-900 cursor-pointer">Pro</div>
+            <section class="h-full w-full bg-zinc-900 flex flex-col gap-3 py-6">
+              <div class="text-[14vw] bg-zinc-900 md:px-20 md:py-12 px-5 py-5 leading-[70%] text-white hover:bg-white hover:text-zinc-900 cursor-pointer italic font-thin">Learn</div>
+              <div class="font-bold text-[14vw] bg-zinc-900 md:px-20 md:py-12 px-5 py-5 leading-[70%] text-white hover:bg-white hover:text-zinc-900 cursor-pointer">How to</div>
+              <div class="font-bold text-[14vw] bg-zinc-900 md:px-20 md:py-12 px-5 py-5 leading-[70%] text-white hover:bg-white hover:text-zinc-900 cursor-pointer">Select Fonts</div>
+              <div class="text-[14vw] bg-zinc-900 md:px-20 md:py-12 px-5 py-5 leading-[70%] text-white hover:bg-white hover:text-zinc-900 cursor-pointer italic font-thin">Like a</div>
+              <div class="font-bold text-[14vw] bg-zinc-900 md:px-20 md:py-12 px-5 py-5 leading-[70%] text-white hover:bg-white hover:text-zinc-900 cursor-pointer">Pro</div>
             </section>
 
-            <section class="w-full h-[30vh] overflow-hidden bg-lime-300 text-zinc-900 text-clip flex items-center justify-center">
+            <section class="w-full md:h-[30vh] h-[12vh] overflow-hidden bg-lime-300 text-zinc-900 text-clip flex items-center justify-center">
               <p class="text-[5.1vw] font-bold uppercase">KICKSTART YOUR FONT JOURNEY</p>
             </section>
 
-            <section class="h-screen grid md:grid-cols-2 p-12 overflow-hidden">
+            <section class="md:h-screen grid md:grid-cols-2 md:p-12 p-5 overflow-hidden">
               <img src="https://illustrations.popsy.co/gray/home-office.svg" alt="">
               <div class="flex flex-col items-center justify-center">
-                <p class="text-zinc-900 font-bold text-[5vw] leading-[1em] text-center uppercase">ALL YOU NEED TO KNOW TO DESIGN FONTS LIKE A PRO</p>
-                <p class="text-zinc-700 text-2xl text-center mt-5">That’s why we created this font previewer especially for designers like you</p>
+                <p class="text-zinc-900 font-bold md:text-[5vw] text-[10vw] leading-[1em] text-center uppercase">ALL YOU NEED TO KNOW TO DESIGN FONTS LIKE A PRO</p>
+                <p class="text-zinc-700 md:text-2xl text-center mt-5">That’s why we created this font previewer especially for designers like you</p>
               </div>
             </section>
 
             <footer class='p-4 bg-white shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-zinc-800 w-full'>
-              <span class='text-sm text-zinc-500 sm:text-center dark:text-zinc-400'>© 2024 JustGoogleFont. All Rights Reserved.</span>
+              <span class='text-sm text-zinc-500 sm:text-center dark:text-zinc-400 hidden md:block'>© 2024 JustGoogleFont. All Rights Reserved.</span>
               <div class='flex flex-wrap gap-2 items-center justify-between text-xs text-zinc-500 dark:text-zinc-400'>
                 Inked By : <a href="https://twitter.com/vimal_bharti" target="_blank" class="underline hover:text-purple-300">Vimal Bharti</a>
               </div>

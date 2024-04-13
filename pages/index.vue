@@ -1,13 +1,12 @@
 <template>
     <div class="bg-pattern">
-        <div class="h-screen overflow-hidden relative flex items-center justify-center">
-            <!-- <img src="/images/hero.gif" class="w-full h-full"> -->
+        <div class="h-full overflow-hidden relative flex items-center justify-center p-12">
             <div class="px-12 text-[10vw] text-center font-bold bg-gradient-to-r from-lime-400 to-teal-400 bg-clip-text text-transparent" :class="font">Google <i class="font-thin">Font</i> Preview <br/> <i class="font-thin">Made</i> Easy</div>
             
             <span class="bg-gradient-to-r from-lime-400 to-teal-400 opacity-75 absolute top-0 left-0 w-[250px] h-[250px] rounded-full blur-[14em]"></span>
             <span class="bg-gradient-to-r from-lime-400 to-teal-400 opacity-75 absolute bottom-0 right-0 w-[180px] h-[180px] rounded-full blur-[14em]"></span>
 
-            <div class="absolute bottom-20 right-10 w-[200px] rounded-xl shadow-xl bg-zinc-900/50 backdrop-blur-lg overflow-hidden animate-bounce hover:animate-none">
+            <div class="hidden md:block absolute bottom-20 right-10 w-[200px] rounded-xl shadow-xl bg-zinc-900/50 backdrop-blur-lg overflow-hidden animate-bounce hover:animate-none">
                 <button 
                     class="w-full text-left py-3 px-5 hover:bg-teal-950 text-zinc-300 text-sm" 
                     :class="font === 'font-exo' ? 'bg-teal-950' : '' " 
@@ -33,8 +32,8 @@
 
         <!-- Templates -->
         <section class="h-full border-b border-zinc-900">
-            <div class="max-w-6xl mx-auto py-20">
-                <h2 class="text-3xl font-bold mb-10">Templates</h2>
+            <div class="max-w-6xl mx-auto md:py-20 py-4 px-4 md:px-0">
+                <h2 class="text-3xl font-bold md:mb-10 mb-4">Templates</h2>
                 <div class="grid grid-cols-1 gap-6">
                     <NuxtLink to="/preview/template-one">
                         <figure class="border-8 border-zinc-800 rounded-xl shadow-xl overflow-hidden group relative">
@@ -52,8 +51,8 @@
 
         <!-- Google Font Collection -->
         <section class="h-full">
-            <div class="max-w-6xl mx-auto py-20">
-                <h2 class="text-3xl font-bold mb-10">Google font collections</h2>
+            <div class="max-w-6xl mx-auto md:py-20 py-6 px-6 md:px-0">
+                <h2 class="text-3xl font-bold mb-5 md:mb-10">Google font collections</h2>
                 <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
                     <div class="w-full">
                         <UCarousel 
@@ -64,7 +63,7 @@
                             arrows
                         >
                             <div 
-                                class="card h-[50vh] w-full flex items-center justify-center bg-pattern" 
+                                class="card md:h-[50vh] h-[30vh] w-full flex items-center justify-center bg-pattern" 
                                 :class="item.style"
                             >
                                 <h2 class="text-xl font-bold">{{ item.name }}</h2>
@@ -89,7 +88,7 @@
                             arrows
                         >
                             <div 
-                                class="card h-[50vh] w-full flex items-center justify-center bg-pattern" 
+                                class="card md:h-[50vh] h-[30vh] w-full flex items-center justify-center bg-pattern" 
                                 :class="item.style"
                             >
                                 <h2 class="text-xl font-bold">{{ item.name }}</h2>
