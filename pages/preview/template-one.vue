@@ -1,9 +1,11 @@
 <template>
   <div class="h-full w-full bg-zinc-100">
 
+    <!-- Fonts Button -->
     <button class="fixed right-0 top-[20vh] z-30 bg-gradient-to-r from-lime-400 to-green-400 text-white h-12 w-12 flex items-center justify-center rounded-l-xl" @click="isOpen = true">
       <Icon name="material-symbols:settings-rounded" class="w-7 h-7" />
     </button>
+
     <USlideover v-model="isOpen" :overlay="false" class="h-[50vh] md:h-full">
       <aside class="bg-zinc-950 h-full overflow-y-auto">
         <div v-if="pending">
@@ -30,6 +32,65 @@
               {{ font.family }}
             </button>
           </div>
+        </div>
+      </aside>
+    </USlideover>
+
+    <!-- Recommendation button -->
+    <button class="fixed left-0 bottom-[20vh] z-30 bg-gradient-to-r from-gray-800 to-slate-600 text-white h-12 w-12 flex items-center justify-center rounded-r-xl" @click="recommendTab = true">
+      <Icon name="material-symbols:order-approve-sharp" class="w-7 h-7" />
+    </button>
+    <USlideover v-model="recommendTab" :overlay="false" side="left" class="h-[50vh] md:h-full">
+      <aside class="bg-zinc-950 h-full overflow-y-auto">
+        <div class="grid grid-cols-1 gap-3 p-3">
+
+          <!-- Adam Dannaway -->
+          <section class="bg-zinc-900 p-3 rounded-xl">
+            <div class="flex justify-between items-center text-sm">
+              <div class="flex items-center gap-2">
+                <img src="/influencer/AdamDannaway.jpeg" alt="uiadrian" class="rounded-full w-9 h-9 border border-yellow-100 shadow-lg">
+                <div>
+                    <h4>Adam Dannaway</h4>
+                    <a class="text-xs text-zinc-400 hover:text-yellow-500" target="_blank" href="https://www.linkedin.com/in/adhamdannaway">@adhamdannaway</a>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 mt-3">
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Figure')">Figure</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Satoshi')">Satoshi</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('DM+Sans')">DM Sans</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Plus+Jakarta+Sans')">Plus Jakarta Sans</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Inter')">Inter</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Manrope')">Manrope</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Open+Sans')">Open Sans</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Urbanist')">Urbanist</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Lato')">Lato</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Quicksand')">Quicksand</button>
+            </div>
+          </section>
+
+          <!-- Adrian Kuleszo -->
+          <section class="bg-zinc-900 p-3 rounded-xl">
+            <div class="flex justify-between items-center text-sm">
+              <div class="flex items-center gap-2">
+                <img src="/influencer/uiadrian.jpeg" alt="uiadrian" class="rounded-full w-9 h-9 border border-yellow-100 shadow-lg">
+                <div>
+                    <h4>Adrian Kuleszo</h4>
+                    <a class="text-xs text-zinc-400 hover:text-yellow-500" target="_blank" href="https://www.instagram.com/uiadrian">@uiadrian</a>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 mt-3">
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Ubranist')">Ubranist</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('DM Sans')">DM Sans</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Manrope')">Manrope</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Public Sans')">Public Sans</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Inter')">Inter</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Sora')">Sora</button>
+              <button class="text-xs border p-1 rounded border-zinc-800 hover:border-zinc-700 text-zinc-400" @click="emitFontSelected('Cabin+Grotesk')">Cabin Grotesk</button>
+            </div>
+          </section>
+
         </div>
       </aside>
     </USlideover>
@@ -105,7 +166,9 @@
   const config = useRuntimeConfig()
     const search = ref('Acme') 
     const selectedFont = ref('Acme');
+
     const isOpen = ref(false)
+    const recommendTab = ref(false)
 
     const changingFontLoading = ref(false)
 

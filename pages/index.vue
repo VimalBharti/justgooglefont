@@ -30,6 +30,8 @@
             </div>
         </div>
 
+        <a href="https://www.producthunt.com/posts/justgooglefont?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-justgooglefont" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=451713&theme=light" alt="JustGoogleFont - Google&#0032;Font&#0032;Previewer | Product Hunt" style="width: 200px; height: 44px;" width="200" height="44" class="fixed left-2 bottom-2 hidden md:block z-10" /></a>
+
         <!-- Templates -->
         <section class="h-full border-b border-zinc-900">
             <div class="max-w-6xl mx-auto md:py-20 py-4 px-4 md:px-0">
@@ -40,9 +42,19 @@
                             <img src="/preview-one.png" class="w-full object-cover h-full group-hover:scale-110 cursor-pointer transition duration-700 ease-in-out group-hover:grayscale" />
                         </figure>
                     </NuxtLink>
+                    <NuxtLink to="/preview/template-three">
+                        <figure class="border-8 border-zinc-800 rounded-xl shadow-xl overflow-hidden group relative">
+                            <img src="/preview-three.png" class="w-full object-cover h-full group-hover:scale-110 cursor-pointer transition duration-700 ease-in-out group-hover:grayscale" />
+                        </figure>
+                    </NuxtLink>
                     <NuxtLink to="/preview/template-two">
                         <figure class="border-8 border-zinc-800 rounded-xl shadow-xl overflow-hidden group relative">
                             <img src="/preview-two.png" class="w-full object-cover h-full group-hover:scale-110 cursor-pointer transition duration-700 ease-in-out group-hover:grayscale" />
+                        </figure>
+                    </NuxtLink>
+                    <NuxtLink to="/preview/template-four">
+                        <figure class="border-8 border-zinc-800 rounded-xl shadow-xl overflow-hidden group relative">
+                            <img src="/preview-four.png" class="w-full object-cover h-full group-hover:scale-110 cursor-pointer transition duration-700 ease-in-out group-hover:grayscale" />
                         </figure>
                     </NuxtLink>
                 </div>
